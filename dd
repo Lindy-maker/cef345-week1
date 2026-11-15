@@ -1,0 +1,13 @@
+[1mdiff --git a/stock.js b/stock.js[m
+[1mindex 9a4e69b..780066c 100644[m
+[1m--- a/stock.js[m
+[1m+++ b/stock.js[m
+[36m@@ -7,7 +7,7 @@[m [mconst products = [[m
+ ];[m
+ [m
+ [m
+[31m-const lowStock = products.filter((p) => p.qty <= p.minQty);[m
+[32m+[m[32mconst lowStock = products.filter((p) => p.qty < p.minQty);[m
+ console.log("Products to restock:");[m
+ for (const p of lowStock) {[m
+     console.log(`- ${p.name}: ${p.qty} left`);[m
